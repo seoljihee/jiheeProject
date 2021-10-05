@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 public class MemberMain {
 		static Parent root1;  //아이디 비밀번호 찾기 root
 		
-	public void getMember() {
+	public void getMember() {  //회원가입 화면 MemberController와 이어져 있음
 		Stage stage = new Stage();
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("memberEvent.fxml"));
 		Parent root = null;

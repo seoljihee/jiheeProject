@@ -18,7 +18,7 @@ public class LoginController implements Initializable{
 		
 	}
 	public void Book() {  //도서검색 및 대여 화면 연결
-		System.out.println("도서검색 및 대여 화면 연결");
+		
 	}
 	public void Myinfo() {  //나의 정보 화면 연결
 		System.out.println("나의 정보 화면 연결");

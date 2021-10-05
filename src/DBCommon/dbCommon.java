@@ -2,13 +2,18 @@ package DBCommon;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+import com.sun.javafx.scene.control.skin.FXVK.Type;
 
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class dbCommon {
-	static Parent root;
 	public static Connection con;
+	static Parent root;
 	public static void setDBConnection() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -23,6 +28,13 @@ public class dbCommon {
 		Stage stage = (Stage)root.getScene().getWindow();
 		stage.close();
 	}
+	
+	public static void getAlert(String msg) {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setContentText(msg);
+		alert.show();
+	}
+
 	
 	
 }

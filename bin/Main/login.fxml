@@ -18,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="467.0" prefWidth="593.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.LoginController">
+<AnchorPane prefHeight="560.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.LoginController">
    <children>
       <TabPane layoutX="211.0" layoutY="72.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -30,31 +30,31 @@
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <TextField fx:id="BookNameSearch" layoutX="85.0" layoutY="25.0" prefHeight="29.0" prefWidth="281.0" promptText="BookName">
+                                    <TextField fx:id="BookNameSearch" layoutX="120.0" layoutY="27.0" prefHeight="43.0" prefWidth="294.0" promptText="BookName">
                                        <font>
                                           <Font name="Haan YHead L" size="13.0" />
                                        </font>
                                     </TextField>
-                                    <Button layoutX="391.0" layoutY="25.0" mnemonicParsing="false" onAction="#BookSearch" prefHeight="28.0" prefWidth="116.0" style="-fx-background-color: black;" text="검색" textFill="WHITE" />
+                                    <Button layoutX="440.0" layoutY="27.0" mnemonicParsing="false" onAction="#BookSearch" prefHeight="42.0" prefWidth="128.0" style="-fx-background-color: black;" text="검색" textFill="WHITE" />
                                  </children>
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <TableView layoutX="175.0" layoutY="30.0" prefHeight="240.0" prefWidth="515.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <TableView layoutX="175.0" layoutY="30.0" prefHeight="318.0" prefWidth="708.0" AnchorPane.bottomAnchor="111.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                       <columns>
-                                        <TableColumn prefWidth="57.0" text="책번호" />
-                                        <TableColumn prefWidth="240.0" text="제목" />
-                                          <TableColumn prefWidth="76.0" text="저자" />
-                                          <TableColumn prefWidth="142.0" text="출판사" />
-                                          <TableColumn prefWidth="75.0" text="대여여부" />
+                                        <TableColumn fx:id="listnum" prefWidth="57.0" text="책번호" />
+                                        <TableColumn fx:id="listtitle" prefWidth="274.0" text="제목" />
+                                          <TableColumn fx:id="listauthor" prefWidth="88.0" text="저자" />
+                                          <TableColumn fx:id="listpu" prefWidth="200.0" text="출판사" />
+                                          <TableColumn fx:id="bor" prefWidth="88.0" text="대여여부" />
                                       </columns>
                                     </TableView>
-                                    <Button layoutX="83.0" layoutY="309.0" mnemonicParsing="false" onAction="#borrow" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: black;" text="대여" textFill="WHITE">
+                                    <Button layoutX="116.0" layoutY="350.0" mnemonicParsing="false" onAction="#borrow" prefHeight="39.0" prefWidth="216.0" style="-fx-background-color: black;" text="대여" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                        </padding>
                                     </Button>
-                                    <Button layoutX="311.0" layoutY="309.0" mnemonicParsing="false" onAction="#Back" prefHeight="31.0" prefWidth="200.0" style="-fx-background-color: black;" text="뒤로가기" textFill="WHITE">
+                                    <Button layoutX="377.0" layoutY="349.0" mnemonicParsing="false" onAction="#Back" prefHeight="41.0" prefWidth="226.0" style="-fx-background-color: black;" text="뒤로가기" textFill="WHITE">
                                        <padding>
                                           <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                        </padding>
@@ -71,7 +71,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
                      <children>
-                        <SplitPane dividerPositions="0.3401015228426396" layoutY="-1.0" prefHeight="266.0" prefWidth="593.0">
+                        <SplitPane dividerPositions="0.3022598870056497" layoutY="-1.0" prefHeight="307.0" prefWidth="710.0">
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="299.0" prefWidth="152.0" style="-fx-background-color: white;">
                                  <children>
@@ -83,25 +83,25 @@
                                           <Blend />
                                        </effect>
                                     </ImageView>
-                                    <Label layoutX="27.0" layoutY="238.0" prefHeight="16.0" prefWidth="53.0" text="아이디">
+                                    <Label layoutX="32.0" layoutY="249.0" prefHeight="16.0" prefWidth="53.0" text="아이디">
                                        <font>
                                           <Font name="Haan YHead L" size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label layoutX="81.0" layoutY="235.0" text=" 님 환영합니다.">
+                                    <Label layoutX="86.0" layoutY="246.0" text=" 님 환영합니다.">
                                        <font>
                                           <Font name="Haan YHead L" size="16.0" />
                                        </font>
                                     </Label>
-                                    <Separator layoutX="8.0" layoutY="225.0" prefHeight="2.0" prefWidth="185.0" />
-                                    <Separator layoutX="9.0" layoutY="31.0" prefHeight="3.0" prefWidth="184.0" />
-                                    <Separator layoutX="8.0" layoutY="30.0" orientation="VERTICAL" prefHeight="197.0" prefWidth="8.0" />
-                                    <Separator layoutX="190.0" layoutY="30.0" orientation="VERTICAL" prefHeight="197.0" prefWidth="6.0" />
+                                    <Separator layoutX="10.0" layoutY="225.0" prefHeight="2.0" prefWidth="185.0" />
+                                    <Separator layoutX="11.0" layoutY="31.0" prefHeight="3.0" prefWidth="184.0" />
+                                    <Separator layoutX="10.0" layoutY="30.0" orientation="VERTICAL" prefHeight="197.0" prefWidth="8.0" />
+                                    <Separator layoutX="192.0" layoutY="30.0" orientation="VERTICAL" prefHeight="197.0" prefWidth="6.0" />
                                  </children>
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="387.0">
                                  <children>
-                                    <VBox layoutX="135.0" layoutY="61.0" prefHeight="321.0" prefWidth="107.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="0.0">
+                                    <VBox layoutX="19.0" layoutY="31.0" prefHeight="274.0" prefWidth="117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="355.0" AnchorPane.topAnchor="31.0">
                                        <children>
                                           <Label prefHeight="21.0" prefWidth="110.0" text="이름 :">
                                              <VBox.margin>
@@ -160,7 +160,7 @@
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <VBox layoutX="115.0" layoutY="-1.0" prefHeight="274.0" prefWidth="273.0">
+                                    <VBox layoutX="143.0" layoutY="29.0" prefHeight="274.0" prefWidth="332.0">
                                        <children>
                                           <TextField fx:id="infoName">
                                              <VBox.margin>
@@ -194,7 +194,7 @@
                                                 <Insets bottom="8.0" top="8.0" />
                                              </padding>
                                           </TextField>
-                                          <ComboBox onAction="#Myborrow" prefHeight="23.0" prefWidth="266.0">
+                                          <ComboBox onAction="#Myborrow" prefHeight="31.0" prefWidth="323.0">
                                              <padding>
                                                 <Insets bottom="4.0" top="4.0" />
                                              </padding>
@@ -208,22 +208,22 @@
                               </AnchorPane>
                           </items>
                         </SplitPane>
-                        <Button layoutX="67.0" layoutY="309.0" mnemonicParsing="false" onAction="#Addinfo" prefHeight="31.0" prefWidth="212.0" style="-fx-background-color: black;" text="정보수정" textFill="WHITE">
+                        <Button layoutX="70.0" layoutY="373.0" mnemonicParsing="false" onAction="#Addinfo" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: black;" text="정보수정" textFill="WHITE">
                            <padding>
                               <Insets bottom="8.0" left="80.0" right="80.0" top="8.0" />
                            </padding>
                         </Button>
-                        <Button layoutX="67.0" layoutY="355.0" mnemonicParsing="false" onAction="#unregister" prefHeight="31.0" prefWidth="212.0" style="-fx-background-color: black;" text="회원탈퇴" textFill="WHITE">
+                        <Button layoutX="70.0" layoutY="428.0" mnemonicParsing="false" onAction="#unregister" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: black;" text="회원탈퇴" textFill="WHITE">
                            <padding>
                               <Insets bottom="8.0" left="80.0" right="80.0" top="8.0" />
                            </padding>
                         </Button>
-                        <Button layoutX="323.0" layoutY="354.0" mnemonicParsing="false" onAction="#logout" prefHeight="31.0" prefWidth="212.0" style="-fx-background-color: black;" text="로그아웃" textFill="WHITE">
+                        <Button layoutX="364.0" layoutY="427.0" mnemonicParsing="false" onAction="#logout" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: black;" text="로그아웃" textFill="WHITE">
                            <padding>
                               <Insets bottom="8.0" left="80.0" right="80.0" top="8.0" />
                            </padding>
                         </Button>
-                        <Button layoutX="323.0" layoutY="308.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="31.0" prefWidth="212.0" style="-fx-background-color: black;" text="도서반납" textFill="WHITE">
+                        <Button layoutX="364.0" layoutY="372.0" mnemonicParsing="false" onAction="#ReturnBook" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: black;" text="도서반납" textFill="WHITE">
                            <padding>
                               <Insets bottom="8.0" left="80.0" right="80.0" top="8.0" />
                            </padding>
@@ -240,7 +240,7 @@
                           <items>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: black;">
                                  <children>
-                                    <Label layoutX="192.0" layoutY="14.0" text="3가지 추천도서" textFill="WHITE">
+                                    <Label layoutX="243.0" layoutY="17.0" text="3가지 추천도서" textFill="WHITE">
                                        <font>
                                           <Font name="Haan YHead L" size="34.0" />
                                        </font>
@@ -249,11 +249,11 @@
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                                  <children>
-                                    <VBox layoutX="-2.0" prefHeight="361.0" prefWidth="154.0">
+                                    <VBox layoutX="-2.0" prefHeight="432.0" prefWidth="154.0">
                                        <children>
                                           <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
                                              <VBox.margin>
-                                                <Insets left="30.0" top="19.0" />
+                                                <Insets bottom="22.0" left="31.0" right="20.0" top="22.0" />
                                              </VBox.margin>
                                              <image>
                                                 <Image url="@Book.png" />
@@ -262,7 +262,7 @@
                                           <Separator prefHeight="10.0" prefWidth="275.0" />
                                           <ImageView fitHeight="90.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
                                              <VBox.margin>
-                                                <Insets left="35.0" top="15.0" />
+                                                <Insets bottom="22.0" left="31.0" right="20.0" top="22.0" />
                                              </VBox.margin>
                                              <image>
                                                 <Image url="@Book2.png" />
@@ -274,7 +274,7 @@
                                              </VBox.margin></Separator>
                                           <ImageView fitHeight="90.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
                                              <VBox.margin>
-                                                <Insets left="30.0" top="20.0" />
+                                                <Insets bottom="22.0" left="31.0" right="20.0" top="22.0" />
                                              </VBox.margin>
                                              <image>
                                                 <Image url="@Book3.png" />
@@ -282,17 +282,16 @@
                                           </ImageView>
                                        </children>
                                     </VBox>
-                                    <Separator layoutX="149.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="362.0" prefWidth="6.0" />
-                                    <Separator layoutX="149.0" layoutY="110.0" prefHeight="8.0" prefWidth="462.0" />
-                                    <Separator layoutX="149.0" layoutY="228.0" prefHeight="0.0" prefWidth="443.0" />
-                                    <VBox layoutX="153.0" layoutY="9.0" prefHeight="104.0" prefWidth="77.0">
+                                    <Separator layoutX="149.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="442.0" prefWidth="6.0" />
+                                    <Separator layoutX="149.0" layoutY="282.0" prefHeight="3.0" prefWidth="564.0" />
+                                    <VBox layoutX="153.0" layoutY="20.0" prefHeight="104.0" prefWidth="77.0">
                                        <children>
                                           <Label text="책제목 :">
                                              <VBox.margin>
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="저자 :">
@@ -300,7 +299,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="출판사 :">
@@ -308,19 +307,19 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <VBox layoutX="151.0" layoutY="123.0" prefHeight="103.0" prefWidth="72.0">
+                                    <VBox layoutX="151.0" layoutY="158.0" prefHeight="103.0" prefWidth="72.0">
                                        <children>
                                           <Label text="책제목 :">
                                              <VBox.margin>
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="저자 :">
@@ -328,7 +327,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="출판사 :">
@@ -336,19 +335,19 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <VBox layoutX="154.0" layoutY="244.0" prefHeight="113.0" prefWidth="72.0">
+                                    <VBox layoutX="156.0" layoutY="300.0" prefHeight="113.0" prefWidth="72.0">
                                        <children>
                                           <Label text="책제목 :">
                                              <VBox.margin>
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="저자 :">
@@ -356,7 +355,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="출판사 :">
@@ -364,19 +363,19 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <VBox layoutX="230.0" layoutY="8.0" prefHeight="103.0" prefWidth="363.0" AnchorPane.leftAnchor="230.0">
+                                    <VBox layoutX="231.0" layoutY="20.0" prefHeight="103.0" prefWidth="363.0" AnchorPane.leftAnchor="231.0">
                                        <children>
                                           <Label text="Label">
                                              <VBox.margin>
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="Label">
@@ -384,7 +383,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="Label">
@@ -392,19 +391,19 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <VBox layoutX="232.0" layoutY="122.0" prefHeight="103.0" prefWidth="359.0" AnchorPane.leftAnchor="232.0">
+                                    <VBox layoutX="234.0" layoutY="157.0" prefHeight="104.0" prefWidth="343.0" AnchorPane.leftAnchor="234.0">
                                        <children>
                                           <Label text="Label">
                                              <VBox.margin>
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="Label">
@@ -412,7 +411,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="Label">
@@ -420,12 +419,12 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
-                                    <VBox layoutX="234.0" layoutY="244.0" prefHeight="114.0" prefWidth="354.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="244.0">
+                                    <VBox layoutX="234.0" layoutY="299.0" prefHeight="133.0" prefWidth="471.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="234.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="299.0">
                                        <opaqueInsets>
                                           <Insets />
                                        </opaqueInsets>
@@ -435,7 +434,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="Label">
@@ -443,7 +442,7 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                           <Label text="Label">
@@ -451,11 +450,12 @@
                                                 <Insets left="10.0" top="13.0" />
                                              </VBox.margin>
                                              <font>
-                                                <Font name="Haan YHead L" size="14.0" />
+                                                <Font name="Haan YHead L" size="16.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </VBox>
+                                    <Separator layoutX="148.0" layoutY="137.0" prefHeight="4.0" prefWidth="561.0" />
                                  </children>
                               </AnchorPane>
                           </items>

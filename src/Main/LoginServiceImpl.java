@@ -2,33 +2,83 @@ package Main;
 
 import java.io.IOException;
 
+import DBCommon.dbCommon;
+import DTO.bookDTO;
+import DTO.memberDTO;
+import dbService.DBServiceImpl;
+import dbService.DBServiceImpl2;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 public class LoginServiceImpl {
 	Parent root;
-	static Parent root1 = null;
+	DBServiceImpl db;
+	DBServiceImpl2 db2;
 	public void setRoot(Parent root) {
 		this.root = root;
 	}
-	public void loginOk(){  
+	
+	public void loginOk(){    //메인화면 로그인 버튼클릭시 호출됨.
 		TextField id = (TextField)root.lookup("#loginId");
-		TextField pwd = (TextField)root.lookup("#loginPwd");
+		PasswordField pw = (PasswordField)root.lookup("#loginPwd");
 		
-		Stage stage = new Stage();
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
-		try {
-			root1 = loader.load();
-		} catch (IOException e) {
-			e.printStackTrace();
+		db = new DBServiceImpl();
+		memberDTO dto = db.memDto(id.getText());
+		if(dto != null) {  //dto가 null값이 아니라면 비밀번호까지 비교하기
+			if(pw.getText().equals(dto.getPwd())) {
+				Stage s1 = new Stage();
+				FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+				Parent root1 = null;
+				try {
+					root1 = loader.load();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				LoginController lcl = loader.getController();
+				lcl.setRoot(root1);
+				s1.setScene(new Scene(root1));
+				s1.show();
+				
+				
+			}else {
+				//비밀번호가 틀리다면 Alert창을 띄운다.
+				dbCommon.getAlert("비밀번호가 틀렸습니다.");
+				pw.requestFocus();
+				pw.clear();
+			}
+		}else {
+			dbCommon.getAlert("존재하지 않는 아이디 입니다.\n회원가입을 진행해 주세요.");
+			id.requestFocus();
+			id.clear();
 		}
-		LoginController lcl = loader.getController();
-		lcl.setRoot(root1);
-		stage.setScene(new Scene(root1));
-		stage.show();
-		
 	}
+	
+	public void bookSearch() {
+		TextField bookName = (TextField)root.lookup("#BookNameSearch");
+		bookDTO dto = db2.search(bookName.getText());
+		if(dto.getTitle().equals(bookName.getText())) {
+			TableView tableView = new TableView();
+			
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

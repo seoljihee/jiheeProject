@@ -11,9 +11,9 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="422.0" prefWidth="564.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171">
+<AnchorPane prefHeight="542.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="master.MasterLoginController">
    <children>
       <TabPane layoutX="165.0" layoutY="155.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -27,20 +27,23 @@
                                  <children>
                                     <HBox layoutX="164.0" layoutY="-13.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                        <children>
-                                          <TextField prefHeight="31.0" prefWidth="222.0">
+                                          <TextField fx:id="memSearcg" prefHeight="41.0" prefWidth="254.0" promptText="Name">
                                              <HBox.margin>
-                                                <Insets left="100.0" top="22.0" />
+                                                <Insets left="130.0" top="33.0" />
                                              </HBox.margin>
                                              <padding>
-                                                <Insets bottom="8.0" left="40.0" right="40.0" top="8.0" />
+                                                <Insets bottom="10.0" left="40.0" right="40.0" top="10.0" />
                                              </padding>
+                                             <font>
+                                                <Font name="Haan YHead L" size="17.0" />
+                                             </font>
                                           </TextField>
-                                          <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="82.0" style="-fx-background-color: black;" text="검색" textFill="WHITE">
+                                          <Button mnemonicParsing="false" onAction="#memsearch" prefHeight="41.0" prefWidth="112.0" style="-fx-background-color: black;" text="검색" textFill="WHITE">
                                              <HBox.margin>
-                                                <Insets left="40.0" top="22.0" />
+                                                <Insets left="40.0" top="33.0" />
                                              </HBox.margin>
                                              <padding>
-                                                <Insets bottom="8.0" left="20.0" right="20.0" top="8.0" />
+                                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
                                              </padding>
                                           </Button>
                                        </children>
@@ -49,19 +52,31 @@
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" style="-fx-background-color: white;">
                                  <children>
-                                    <ListView layoutX="-2.0" prefHeight="182.0" prefWidth="564.0" />
-                                    <TableView layoutX="-2.0" layoutY="1.0" prefHeight="180.0" prefWidth="564.0">
+                                    <ListView layoutX="-2.0" prefHeight="189.0" prefWidth="593.0" />
+                                    <TableView layoutX="-2.0" layoutY="1.0" prefHeight="240.0" prefWidth="668.0">
                                       <columns>
                                         <TableColumn prefWidth="55.0" text="번호" />
-                                        <TableColumn prefWidth="75.0" text="이름" />
-                                          <TableColumn prefWidth="157.0" text="전화번호" />
-                                          <TableColumn prefWidth="276.0" text="주소" />
+                                        <TableColumn prefWidth="95.0" text="이름" />
+                                          <TableColumn prefWidth="205.0" text="전화번호" />
+                                          <TableColumn prefWidth="312.0" text="주소" />
                                       </columns>
                                     </TableView>
-                                    <Button layoutX="111.0" layoutY="208.0" mnemonicParsing="false" text="Button" />
-                                    <Button layoutX="292.0" layoutY="208.0" mnemonicParsing="false" text="Button" />
-                                    <Button layoutX="111.0" layoutY="249.0" mnemonicParsing="false" text="Button" />
-                                    <Button layoutX="292.0" layoutY="249.0" mnemonicParsing="false" text="Button" />
+                                    <Button layoutX="109.0" layoutY="274.0" mnemonicParsing="false" onAction="#memmod" prefHeight="31.0" prefWidth="202.0" style="-fx-background-color: black;" text="회원수정" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="8.0" left="70.0" right="70.0" top="8.0" />
+                                       </padding></Button>
+                                    <Button layoutX="355.0" layoutY="274.0" mnemonicParsing="false" onAction="#memdel" prefHeight="31.0" prefWidth="202.0" style="-fx-background-color: black;" text="회원삭제" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="8.0" left="70.0" right="70.0" top="8.0" />
+                                       </padding></Button>
+                                    <Button layoutX="109.0" layoutY="319.0" mnemonicParsing="false" onAction="#memadd" prefHeight="31.0" prefWidth="202.0" style="-fx-background-color: black;" text="회원추가" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="8.0" left="70.0" right="70.0" top="8.0" />
+                                       </padding></Button>
+                                    <Button layoutX="355.0" layoutY="319.0" mnemonicParsing="false" onAction="#memback" prefHeight="31.0" prefWidth="202.0" style="-fx-background-color: black;" text="뒤로가기" textFill="WHITE">
+                                       <padding>
+                                          <Insets bottom="8.0" left="70.0" right="70.0" top="8.0" />
+                                       </padding></Button>
                                  </children>
                               </AnchorPane>
                           </items>

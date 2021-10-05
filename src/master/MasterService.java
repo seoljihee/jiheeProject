@@ -1,26 +1,21 @@
 package master;
 
-import java.io.IOException;
-
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class MasterService {
-	
-	public void getLogin() {
-		Parent root = null;
-		Stage stage = new Stage();
-		FXMLLoader loader = new FXMLLoader(getClass().getResource("masterLogin.fxml"));
-		try {
-			root = loader.load();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		MasterLoginController mls = loader.getController();
-		mls.setRoot(root);
-		stage.setScene(new Scene(root));
-		stage.show();
+	Parent root;  //마스터로그인하고 들어오면 있는 창과 연결됨
+	public void setRoot(Parent root) {
+		this.root = root;
 	}
+	
+	public void memmod() {
+		Stage memmod = new Stage();
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("mod.fxml"));
+		memmod.setScene(new Scene(root));
+		memmod.show();
+	}
+
 }

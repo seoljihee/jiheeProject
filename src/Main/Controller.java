@@ -10,7 +10,7 @@ import member.MemberMain;
 
 public class Controller implements Initializable{
 	Parent root;
-	LoginServiceImpl ls;  
+	LoginServiceImpl ls;
 	MemberMain mm;
 	MasterMain master;
 	public void setRoot(Parent root) {
@@ -26,7 +26,6 @@ public class Controller implements Initializable{
 	}
 	
 	public void login() {  //login버튼.
-		System.out.println("로그인 버튼");
 		ls.loginOk();
 	}
 	
