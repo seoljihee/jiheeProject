@@ -98,17 +98,22 @@
                                           </TextField>
                                        </children>
                                     </VBox>
-                                    <Button layoutX="152.0" layoutY="222.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="수정" textFill="WHITE">
+                                    <Button layoutX="101.0" layoutY="222.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="수정" textFill="WHITE">
                                        <font>
                                           <Font name="Haan YHead L" size="13.0" />
                                        </font>
                                     </Button>
-                                    <Button layoutX="291.0" layoutY="221.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="삭제" textFill="WHITE">
+                                    <Button layoutX="233.0" layoutY="221.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="삭제" textFill="WHITE">
                                        <font>
                                           <Font name="Haan YHead L" size="13.0" />
                                        </font>
                                     </Button>
-                                    <Button layoutX="428.0" layoutY="221.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="취소" textFill="WHITE" AnchorPane.topAnchor="222.0">
+                                    <Button layoutX="364.0" layoutY="222.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="취소" textFill="WHITE" AnchorPane.topAnchor="222.0">
+                                       <font>
+                                          <Font name="Haan YHead L" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="494.0" layoutY="222.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="100.0" style="-fx-background-color: black;" text="검색" textFill="WHITE">
                                        <font>
                                           <Font name="Haan YHead L" size="13.0" />
                                        </font>

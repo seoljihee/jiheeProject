@@ -36,6 +36,7 @@ public class MasterLoginController implements Initializable{
 				}
 				MasterLoginController mlcl = loader.getController();
 				mlcl.setRoot(root1);
+				stage.setTitle("관리자");
 				stage.setScene(new Scene(root1));
 				stage.show();
 				dbCommon.getAlert("관리자 계정에 로그인 하셨습니다.");
