@@ -10,6 +10,7 @@ import dbService.DBServiceImpl2;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -47,6 +48,8 @@ public class LoginServiceImpl {
 				s1.setScene(new Scene(root1));
 				s1.show();
 				
+				dbCommon.getAlert(id.getText() + " 님 환영합니다!");
+				
 				
 			}else {
 				//비밀번호가 틀리다면 Alert창을 띄운다.
@@ -72,7 +75,32 @@ public class LoginServiceImpl {
 	}
 	
 	
-	
+	public void getRecommend() {
+		Label reTitle01 = (Label)root.lookup("#title01");
+		Label reAuthor01 = (Label)root.lookup("#author01");
+		Label rePublisher01 = (Label)root.lookup("#publisher01");
+		
+		Label reTitle02 = (Label)root.lookup("#title02");
+		Label reAuthor02 = (Label)root.lookup("#author02");
+		Label rePublisher02 = (Label)root.lookup("#publisher02");
+		
+		Label reTitle03 = (Label)root.lookup("#title03");
+		Label reAuthor03 = (Label)root.lookup("#author03");
+		Label rePublisher03 = (Label)root.lookup("#publisher03");
+		
+		
+		reTitle01.setText("안녕");
+		reAuthor01.setText("나는");
+		rePublisher01.setText("설지희");
+		
+		reTitle02.setText("안녕");
+		reAuthor02.setText("나는");
+		rePublisher02.setText("설지희");
+		
+		reTitle03.setText("안녕");
+		reAuthor03.setText("나는");
+		rePublisher03.setText("설지희");
+	}
 	
 	
 	
